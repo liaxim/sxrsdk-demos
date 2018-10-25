@@ -19,21 +19,22 @@ import android.opengl.GLES20;
 import android.util.Log;
 import android.view.MotionEvent;
 
-import org.gearvrf.SXRActivity;
-import org.gearvrf.SXRContext;
-import org.gearvrf.io.SXRCursorController;
-import org.gearvrf.SXREventListeners;
-import org.gearvrf.SXRMain;
-import org.gearvrf.SXRPicker;
-import org.gearvrf.SXRRenderData;
-import org.gearvrf.SXRScene;
-import org.gearvrf.SXRSceneObject;
-import org.gearvrf.ITouchEvents;
-import org.gearvrf.io.SXRInputManager;
-import org.gearvrf.io.SXRTouchPadGestureListener;
-import org.gearvrf.widgetplugin.SXRWidgetPlugin;
-import org.gearvrf.widgetplugin.SXRWidgetSceneObject;
-import org.gearvrf.widgetplugin.SXRWidgetSceneObjectMeshInfo;
+import com.samsungxr.ITouchEvents;
+import com.samsungxr.SXRActivity;
+import com.samsungxr.SXRContext;
+import com.samsungxr.SXREventListeners;
+import com.samsungxr.SXRMain;
+import com.samsungxr.SXRPicker;
+import com.samsungxr.SXRRenderData;
+import com.samsungxr.SXRScene;
+import com.samsungxr.SXRSceneObject;
+import com.samsungxr.io.SXRCursorController;
+import com.samsungxr.io.SXRInputManager;
+import com.samsungxr.io.SXRTouchPadGestureListener;
+import com.samsungxr.widgetplugin.SXRWidgetPlugin;
+import com.samsungxr.widgetplugin.SXRWidgetSceneObject;
+import com.samsungxr.widgetplugin.SXRWidgetSceneObjectMeshInfo;
+
 import org.joml.Vector3f;
 
 import java.util.ArrayList;
