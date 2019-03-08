@@ -190,18 +190,6 @@ dependencies {
     }
 
     arImplementation 'com.google.protobuf:protobuf-lite:3.0.0'
-	if (file("../../../SXR").exists()) {
-        if (project.hasProperty("useLocalDependencies") && project.useLocalDependencies) {
-            if (findProject(':sxr_adapter')) {
                 arImplementation project(':sxr_adapter')
-            } else {
-                arImplementation(':sxr_adapter-release@aar')
-            }
-        } else {
-            arImplementation "com.samsungxr:sxr_adapter:$sxrVersion"
-        }
-    } else {
-        arImplementation "com.samsungxr:sxr_adapter:$sxrVersion"
-    }
 }
 
