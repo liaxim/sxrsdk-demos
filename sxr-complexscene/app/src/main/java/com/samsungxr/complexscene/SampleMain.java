@@ -55,7 +55,7 @@ public class SampleMain extends SXRMain {
         cursor.getRenderData()
                 .setRenderingOrder(SXRRenderData.SXRRenderingOrder.OVERLAY)
                 .setDepthTest(false)
-                .setRenderingOrder(CURSOR_RENDER_ORDER);
+                .setRenderingOrder(CURSOR_RENDER_ORDER).setLayer(1);
         sxrContext.getMainScene().getMainCameraRig().addChildObject(cursor);
 
         try {
@@ -64,10 +64,11 @@ public class SampleMain extends SXRMain {
                     new SXRAndroidResource(sxrContext, "bunny.obj"),
                     settings);
 
-            final int OBJECTS_CNT = 8;
+            final int OBJECTS_CNT = 1;
             for (int x=-OBJECTS_CNT; x<=OBJECTS_CNT; ++x) {
                 for (int y=-OBJECTS_CNT; y<=OBJECTS_CNT; ++y) {
                     SXRNode sceneObject = getColorMesh(1.0f, mesh);
+                    sceneObject.setName("bunny"+x+""+y);
                     sceneObject.getTransform().setPosition(1.0f*x, 1.0f*y, -7.5f);
                     sceneObject.getTransform().setScale(0.5f, 0.5f, 1.0f);
                     scene.addNode(sceneObject);
@@ -77,8 +78,6 @@ public class SampleMain extends SXRMain {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     private SXRNode getColorMesh(float scale, SXRMesh mesh) {
