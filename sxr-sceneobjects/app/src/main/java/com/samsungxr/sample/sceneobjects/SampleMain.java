@@ -93,7 +93,7 @@ public class SampleMain extends SXRMain {
         SXRCameraNode cameraObject = null;
         try {
             cameraObject = new SXRCameraNode(sxrContext, 3.6f, 2.0f);
-            cameraObject.setUpCameraForVrMode(1); // set up 60 fps camera preview.
+//            cameraObject.setUpCameraForVrMode(1); // set up 60 fps camera preview.
         } catch (SXRCameraNode.SXRCameraAccessException e) {
             // Cannot open camera
             Log.e(TAG, "Cannot open the camera",e);
